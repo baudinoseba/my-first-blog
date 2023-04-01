@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abran Cancha</title>
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Estilos para el encabezado */
+    header {
+      background-color: #b0f2c2;
+      color: #000000;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Estilos para el título de la página */
+    h1 {
+      margin-top: 0;
+    }
+
+    /* Estilos para los enlaces del menú */
+    nav a {
+      color: #000000;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    /* Estilos para el botón de reserva */
+    .book-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #b0f2c2;
+      color: #000000;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    /* Estilos para la sección de reserva */
+    .reservation-section {
+      padding: 50px;
+      text-align: center;
+    }
+
+    /* Estilos para los campos del formulario */
+    .reservation-form label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .reservation-form input[type="text"],
+    .reservation-form input[type="email"] {
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 20px;
+      border: 2px solid #333;
+      border-radius: 5px;
+      font-size: 1.2rem;
+    }
+
+    .reservation-form input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #b0f2c2;
+      color: #000000;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    /* Estilos para la sección de precios */
+.price-section {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  padding: 50px;
+  text-align: center;
+}
+
+.price-section h3 {
+  margin-top: 0;
+}
+
+.price-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.price-table th,
+.price-table td {
+  padding: 10px;
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+    /* Estilos para la sección de políticas de reserva */
+    .policy-section {
+      width: 97%;
+      background-color: #ffffff;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .section-image {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .section-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Abran Cancha</h1>
+        <main>
+            <section class="section-image">
+              <img src="PAGINA/futbol.jpg">
+            </section>
+          
+            <section class="reservation-section">
+              <h2>Reserva tu cancha de fútbol</h2>
+              <form class="reservation-form" action="enviar_reserva.php" method="POST">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+          
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+          
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+          
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+          
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+          
+                <label for="cancha">Cancha:</label>
+                <select id="cancha" name="cancha" required>
+                  <option value="cancha1">Cancha Techada</option>
+                  <option value="cancha2">Cancha 2</option>
+                  <option value="cancha3">Cancha 3</option>
+                </select>
+                <h3>Nos encontramos en Pasteur 601 en el barrio Lomas del Sur de Sunchales, Santa Fe</h3>
+                <input type="submit" value="Reservar" class="book-button">
+              </form>
+            </section>
+          
+            <section class="price-section">
+              <h2>Nuestros precios</h2>
+              <table class="price-table">
+                <thead>
+                  <tr>
+                    <th>Cancha</th>
+                    <th>Precio por hora por persona</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Cancha Techada</td>
+                    <td>$700</td>
+                  </tr>
+                  <tr>
+                    <td>Cancha 2</td>
+                    <td>$500</td>
+                  </tr>
+                  <tr>
+                    <td>Cancha 3</td>
+                    <td>$500</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3></h3>
+              <h3>CBU: XXXXXXXXXXX</h3>
+            </section>
+
+            <section class="policy-section">
+              <h2>Políticas de reserva</h2>
+              <p>Para reservar una cancha es necesario hacer un pago del 50% del valor total de la reserva. El pago se puede hacer por transferencia o en las instalaciones de la cancha.</p>
+              <p>En caso de cancelación de la reserva, se hará un reembolso del 50% del valor total si la cancelación se realiza con al menos 24 horas de anticipación. Si la cancelación se realiza con menos de 24 horas de anticipación, no se realizará ningún reembolso.</p>
+            </section>
+          </main>
+          
+          <footer>
+            <p>© Reserva de canchas de fútbol, 2023</p>
+          </footer>
+          
+          </body>
+          </html>
+          
